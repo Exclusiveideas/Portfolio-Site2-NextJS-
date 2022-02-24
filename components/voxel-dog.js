@@ -1,5 +1,5 @@
 import {useState, useEffect, useRef, useCallback } from 'react';
-import { Box, Spinner, spinner } from '@chakra-ui/react'; 
+import { Box, Spinner } from '@chakra-ui/react'; 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { loadGLTFModel } from '../lib/model';
@@ -28,8 +28,8 @@ const VoxelDog = () => {
     const handlwWindowResize = useCallback(() => {
         const { current: container} = refContainer;
         if(container && renderer) {
-            const scW = container.clientWidth;
-            const scH = container.clientHeight;
+           // const scW = container.clientWidth;
+          // const scH = container.clientHeight;
         }
     }, [renderer])
 
@@ -111,7 +111,7 @@ const VoxelDog = () => {
             renderer.dispose()
           }
         }
-      }, [])
+      })
 
 
       useEffect(() => {
